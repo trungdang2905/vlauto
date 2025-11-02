@@ -1,0 +1,10 @@
+^E:\AUTO\VLAUTO\VLAUTO\HELP\VLAUTO.HHP
+start /wait hhc "Help\VLAuto.hhp"
+if not exist "Help\VLAuto.chm" goto :HelpError
+copy "Help\VLAuto.chm" "E:\Auto\VLAuto\_Bin\VLAutoPr.chm"
+goto :HelpDone
+:HelpError
+echo Help\VLAuto.hhp(1) : error:Problem encountered creating help file
+echo.
+:HelpDone
+echo.
